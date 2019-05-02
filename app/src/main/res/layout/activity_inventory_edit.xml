@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".InventoryEditActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_inventory_edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_inventory_edit_add_item"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#00b300"
+            android:text="Agregar artículo manualmente"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:onClick="startAddItemActivity"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_inventory_edit_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+
+            <Button
+                android:id="@+id/btn_inventory_edit_scan_single_item"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00b300"
+                android:text="Scanear producto individual"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                />
+
+            <Button
+                android:id="@+id/btn_inventory_edit_scan_multiple_item"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:backgroundTint="#859000"
+                android:text="Scanear producto en paquete o caja"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                />
+
+
+    </LinearLayout>
+
+</LinearLayout>

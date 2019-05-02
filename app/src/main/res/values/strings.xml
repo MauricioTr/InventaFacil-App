@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">InventaFacil</string>
+    <string name="api_base_url">localhost:8088/</string>
 </resources>

@@ -6,20 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
 
     <Button
+        android:id="@+id/btn_main_menu_catalog_display"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:paddingHorizontal="30dp"
         android:paddingVertical="15dp"
-        android:text="test"
+        android:text="Versión actual del catálogo: "
         android:textAllCaps="false"
         android:textSize="25sp"
+        android:clickable="false"
+        android:onClick="downloadCatalog"
         />
 
     <Button
+        android:id="@+id/btn_main_menu_continue_inventory"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -27,9 +40,11 @@
         android:paddingVertical="15dp"
         android:text="Continuar inventarios en progreso"
         android:textAllCaps="false"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:onClick="navigateToInventorySelection"/>
 
     <Button
+        android:id="@+id/btn_main_menu_new_inventory"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -39,5 +54,12 @@
         android:textAllCaps="false"
         android:textSize="25sp"
         android:onClick="navigateToInventoryCreation"/>
+
+    <ProgressBar
+        android:id="@+id/pb_main_menu_loading_indicator"
+        android:layout_height="42dp"
+        android:layout_width="42dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
 
 </LinearLayout>

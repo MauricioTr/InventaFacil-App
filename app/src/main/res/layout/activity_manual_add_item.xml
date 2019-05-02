@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utils.ManualAddItemActivity"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_toolbar_manual_product"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Nombre del producto"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/actv_manual_product_name_autocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Código de barras del producto:"/>
+
+    <TextView
+        android:id="@+id/tv_manual_product_barcode_display"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Cantidad   #"
+            />
+
+        <EditText
+            android:id="@+id/et_manual_product_quantity_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:maxLines="1"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <TextView android:layout_height="0dip"
+        android:layout_width="fill_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_manual_product_add_product"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#00b300"
+        android:textSize="23dp"
+        android:text="Agregar producto"
+        />
+
+</LinearLayout>
