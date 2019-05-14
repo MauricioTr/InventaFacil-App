@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiController {
     //TODO: Remove hardcoded url
-    static  private final String BASE_URL = "http://10.0.0.23:8088/";
+    static  private final String BASE_URL = "https://inventafacil.herokuapp.com/";
     private final  Gson gson = new GsonBuilder().setLenient().create();
     private final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URL)

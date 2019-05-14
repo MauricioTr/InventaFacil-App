@@ -47,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mUsernameField = (EditText) findViewById(R.id.et_username);
         mPasswordField = (EditText) findViewById(R.id.et_password);
 
-        //TODO: Remove this code
-        //InventaFacilPrefManager prefManager = new InventaFacilPrefManager(this);
-        //prefManager.saveNewToken(null);
+
         attemptLoginSkip(getCurrentFocus());
     }
 
@@ -201,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onLoadFinished(Loader<String> loader, String data) {
-            Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
+
 
             InventaFacilPrefManager prefManager = new InventaFacilPrefManager(getApplicationContext());
 
